@@ -11,13 +11,18 @@ Pouring coffee into the cup
 Pouring some milk into the cup
 Coffee is ready!`);
 
-console.log("Write how many cups of coffee you will need:");
-let userInOne = Number(input());
-let water = 200;
-let milk = 50;
-let coffeeBeans = 15;
-console.log(`for ${userInOne} cups of coffee you will need:
-${water * userInOne} ml of water
-${milk * userInOne} ml of milk
-${coffeeBeans * userInOne} g of coffee beans`);
+function cupsNeed() {
+  console.log("Write how many cups of coffee you will need:");
+  let userInOne = Number(input());
+  let water = 200;
+  let milk = 50;
+  let coffeeBeans = 15;
+  console.log(`for ${userInOne} cups of coffee you will need:
+  ${water * userInOne} ml of water
+  ${milk * userInOne} ml of milk
+  ${coffeeBeans * userInOne} g of coffee beans`);
+}
+
+
+
 
