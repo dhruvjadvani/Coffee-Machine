@@ -23,6 +23,6 @@ function cupsNeed() {
   ${coffeeBeans * userInOne} g of coffee beans`);
 }
 
-
+cupsNeed();
 
 
