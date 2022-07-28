@@ -8,12 +8,12 @@ let beans = 120;
 let cups = 9;
 
 function print() {
-console.log(`The coffee machine has:
-${water} ml of water
-${milk} ml of milk
-${beans} g of coffee beans
-${cups} disposable cups
-$${money} of money`);
+    console.log(`The coffee machine has:
+    ${water} ml of water
+    ${milk} ml of milk
+    ${beans} g of coffee beans
+    ${cups} disposable cups
+    $${money} of money`);
 }
 
 function buy() {
@@ -27,13 +27,13 @@ function buy() {
   if(userBought == coffeeShop['espresso']) {
     // One espresso requires 250 ml of water and 16 g of coffee beans. It costs $4;
     if(water < 250) {
-      console.log("Sorry, not enough water!");
-      return;
+        console.log("Sorry, not enough water!");
+        return;
     } else if(beans < 16) {
-      console.log("Sorry, not enough coffee beans!");
-      return;
+        console.log("Sorry, not enough coffee beans!");
+        return;
     } else {
-      console.log("I have enough resources, making you a coffee!");
+        console.log("I have enough resources, making you a coffee!");
     }
     water = water - 250;
     beans = beans - 16;
@@ -44,16 +44,16 @@ function buy() {
   } else if(userBought == coffeeShop['latte']) {
     // One latte requires 350 ml of water, 75 ml of milk, and 20 g of coffee beans. It costs $7;
     if(water < 350) {
-      console.log("Sorry, not enough water!");
-      return;
+        console.log("Sorry, not enough water!");
+        return;   
     } else if(milk < 75) {
-      console.log("Sorry, not enough milk!");
-      return;
+        console.log("Sorry, not enough milk!");
+        return;
     } else if(beans < 20) {
-      console.log("Sorry, not enough coffee beans!");
-      return;
+        console.log("Sorry, not enough coffee beans!");
+        return;
     } else {
-      console.log("I have enough resources, making you a coffee!")
+        console.log("I have enough resources, making you a coffee!");
     }
     water = water - 350;
     milk = milk - 75;
@@ -65,16 +65,16 @@ function buy() {
   } else if(userBought == coffeeShop['cappuccino']) {
     // One cappuccino requires 200 ml of water, 100 ml of milk, and 12 g of coffee beans. It costs $6.
     if(water < 200) {
-      console.log("Sorry, not enough water!");
-      return;
+        console.log("Sorry, not enough water!");
+        return;
     } else if(milk < 100) {
-      console.log("Sorry, not enough milk!");
-      return;
+        console.log("Sorry, not enough milk!");
+        return;
     } else if(beans < 12) {
-      console.log("Sorry, not enough coffee beans!");
-      return;
+        console.log("Sorry, not enough coffee beans!");
+        return;
     } else {
-      console.log("I have enough resources, making you a coffee!")
+        console.log("I have enough resources, making you a coffee!");
     }
     water = water - 200;
     milk = milk - 100;
@@ -91,44 +91,44 @@ function buy() {
 
 
 function fill() {
-console.log("Write how many ml of water you want to add:");
-let waterAdd = Number(input());
-water = water + waterAdd;
+    console.log("Write how many ml of water you want to add:");
+    let waterAdd = Number(input());
+    water = water + waterAdd;
 
-console.log("Write how many ml of milk you want to add:");
-let milkAdd = Number(input());
-milk = milk + milkAdd;
+    console.log("Write how many ml of milk you want to add:");
+    let milkAdd = Number(input());
+    milk = milk + milkAdd;
 
-console.log("Write how many grams of coffee beans you want to add:");
-let beansAdd = Number(input());
-beans = beans + beansAdd;
+    console.log("Write how many grams of coffee beans you want to add:");
+    let beansAdd = Number(input());
+    beans = beans + beansAdd;
 
-console.log("Write how many disposable coffee cups you want to add:");
-let cupsAdd = Number(input());
-cups = cups + cupsAdd;
+    console.log("Write how many disposable coffee cups you want to add:");
+    let cupsAdd = Number(input());
+    cups = cups + cupsAdd;
 }
 
 function take() {
-  console.log(`I gave you ${money}`);
-  money = 0;
+    console.log(`I gave you ${money}`);
+    money = 0;
 }
 
 
 while(true) {
-  console.log("Write action (buy, fill, take, remaining, exit):");
-  let userChoose = input();
+    console.log("Write action (buy, fill, take, remaining, exit):");
+    let userChoose = input();
 
-if(userChoose == 'buy') {
-  buy();
-} else if(userChoose == 'fill') {
-  fill();
-} else if(userChoose == 'take') {
-  take();
-} else if(userChoose == 'remaining') {
-  print();
-} else if(userChoose == 'exit') {
-  break;
-}
+    if(userChoose == 'buy') {
+        buy();
+    } else if(userChoose == 'fill') {
+        fill();
+    } else if(userChoose == 'take') {
+        take();
+    } else if(userChoose == 'remaining') {
+        print();
+    } else if(userChoose == 'exit') {
+        break;
+    }
 }
 
 
