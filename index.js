@@ -83,7 +83,7 @@ function buy() {
         cups = cups - 1;
         
         
-    } else if(userBought == 'back' || userBought == 'remaining') {
+    } else if(userBought == 'back') {
         return;
     } 
 
